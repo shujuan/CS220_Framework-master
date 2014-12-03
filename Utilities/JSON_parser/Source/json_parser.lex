@@ -5,8 +5,12 @@
  */
 
 %{
+<<<<<<< HEAD
 // #include "json_parser_bison.hh"
 #include "json_parser_bison.h"
+=======
+#include "json_parser_bison.hh"
+>>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
 #include <string.h>
 %}
 

@@ -4,13 +4,20 @@
 #include <vector>
 #include "point.h"
 
+<<<<<<< HEAD
 #include "../Utilities/JSON_parser/json_file.h"
+=======
+#include "../Utilities/JSON_parser/Headers/json_file.h"
+>>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
 #include "../Utilities/JSON_parser/Headers/json_array.h"
 #include "../Utilities/JSON_parser/Headers/json_value.h"
 #include "../Utilities/JSON_parser/Headers/json_object.h"
 #include "../Utilities/JSON_parser/Headers/json_parser.h"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
 using JSON::JsonArray;
 using JSON::JsonValue;
 using JSON::JsonObject;
@@ -67,4 +74,8 @@ namespace Utilities {
 	};
 }
 
+<<<<<<< HEAD
 #endif // _PROBLEM_OBJECT_H_
+=======
+#endif // _PROBLEM_OBJECT_H_
+>>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81

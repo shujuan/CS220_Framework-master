@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
 #ifndef _JSON_PARSER_JSON_NAME_VALUE_H_
 #define _JSON_PARSER_JSON_NAME_VALUE_H_
 
