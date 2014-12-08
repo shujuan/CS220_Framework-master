@@ -2,16 +2,11 @@
             ===== A Short Summary of the Claims System =====
 
 In this system, claims are used for printing debug and note information.
-<<<<<<< HEAD
 This is done so that we can easily turn this information on and off throughout
-=======
-This is done so that we can esily turn this information on and off throughout
->>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
 the entire code base without having to manually comment outputs or look
 through multiple files.
 
 Claims are a simple call that requires two parameters, a message and a level
-<<<<<<< HEAD
     + string message : The message that you want output to the user, this should
     + Severity level: The severity of the message, which will determine what happens
         after the claim has been printed
@@ -28,33 +23,6 @@ Currently, there are four different severity levels:
         text writes to standard error but will not terminate the program
     + kError : This level should be used when the program encounters an error that it
         cannot tolerate, it will print to standard error and make a call to exit()
-=======
-
-    + string message : The message that you want output to the user, this should
-
-    + Severity level: The severity of the message, which will determine what happens
-        after the claim has been printed
-
-    + int tabs (default = 0) : This is an optional parameter which will add a number of
-        tabs before the message is output, to make reading debug outputs from
-        differeing function levels easier
-
-Currently, there are four different severity levels:
-
-    + kDebug : This level should be used when printing debug text for development, 
-        this level can be turned off by changing DEBUG to true in this file
-
-    + kNote : This is informative text and should be used to inform the user of things
-        like program progression and echoing inputs
-
-    + kWarning : This level should be used when the system encounters a problem that
-        it will not cause a program crash, but should be noted by the user. This
-        text writes to standard error but will not terminate the program
-
-    + kError : This level should be used when the program encounters an error that it
-        cannot tolerate, it will print to standard error and make a call to exit()
-
->>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
 There is one other feature known as a wait claim, a call to wait_claim(...) requires a
 message, but does not have a severity level. This claim will pause the running of your
 program, output your message, and then resume the program only after prompted by user
@@ -73,10 +41,7 @@ using std::string;
 using std::stringstream;
 
 namespace Utilities {
-<<<<<<< HEAD
 
-=======
->>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
     enum Severity{kDebug, kNote, kWarning, kError};
 
     /* Useful string functions */

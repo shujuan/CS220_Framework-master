@@ -18,14 +18,15 @@ class GRNode: public Node {
 private:
 
 	bool block ;   	// The cell is part of the board
+
 	int  leeMark ;  // Lee mark routing
 
 	bool inpath ; 	// If the cell is in a path
 	int  netID ; 	// Net ID per cell
+
 	bool pin ; 		// Pin flag
 
 	bool bottleNeck ; // Bottle neck flag
-	bool updateCell ; // If the cell was updated in the last cycle
 	int  priority ;  // Cell priority
 
 public:
@@ -59,9 +60,6 @@ public:
 
 	void setBottleNeck( bool b);
 	bool getBottleNeck( );
-
-	void setUpdatedCell( bool n) ;
-	bool getUpdatedCell() ;
 
 	void setPriority( int p) ;
 	int  getPriority( ) ;

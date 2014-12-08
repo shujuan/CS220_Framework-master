@@ -62,8 +62,8 @@ public:
 	void pruneGrid();
 
 	void writeGridDiskNets( int filen ) ;
+
 	void writeGridDiskLee( int filen ) ;
-	void writeGridDiskPri( int filen ) ;
 
 	void addNodeToNet( int x, int y, int netID );
 

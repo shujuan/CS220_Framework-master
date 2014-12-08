@@ -9,7 +9,7 @@
 #define GRNETLIST_H_
 
 #include <string>
-#include "..\Headers\netlist.h"
+#include "../Headers/netlist.h"
 
 using Utilities::Netlist;
 using Utilities::Point;

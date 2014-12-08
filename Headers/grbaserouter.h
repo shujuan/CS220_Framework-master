@@ -23,15 +23,20 @@ class GRBaseRouter {
 
 protected:
 
-	GRGrid * maze ;
+	GRGrid * nextmaze ;
+	GRGrid * prevmaze ;
 	vector<Utilities::GRNetList*> inputNets ;
 
 public:
 
-	GRBaseRouter( GRGrid *grid, vector<Utilities::GRNetList*> list );
+	GRBaseRouter( GRGrid *grid1,  GRGrid *grid2, vector<Utilities::GRNetList*> list );
 	virtual ~GRBaseRouter();
 
-	void markGenNeckCells(vector<GRNode*> * pathnodes, GRNode* s, GRNode* t ) ;
+	virtual void markGenNeckCells( GRGrid * m, vector<GRNode*> * pathnodes, GRNode* s, GRNode* t ) ;
+	virtual void retraceGRPath( GRGrid * m, GRNode *source, GRNode * sink ) ;
+	virtual bool isLocalBottleNeck( GRGrid * m, int x1, int y1, int net ) ;
+	virtual int findGRPaths( GRGrid * m, int cycle, int p  ) ;
+	virtual bool findLeePath( GRGrid * m, GRNode * target, GRNode * source, int cycle ) ;
 
 	void sortNets(vector<Utilities::GRNetList*> * nets);
 	void sortNodes(vector<Utilities::GRNode*> * n);
@@ -39,11 +44,10 @@ public:
 	Utilities::GRNetList * getHPriorityNet(vector<GRNode*> listofnodes);
 	Utilities::GRNode * getHPriorityNode(vector<GRNode*> listofnodes);
 
-	bool findGRPath(GRNode * target, GRNode * source, int cycle ) ;
-	int findGRPaths( int cycle, int p  ) ;
-	void retraceGRPath( GRNode * source, GRNode * sink ) ;
+	virtual GRNetList * getGRNetObject(int netid ) ;
 
-	GRNetList * getGRNetObject(int netid ) ;
+	virtual void synchonizeGrids ();
+
 
 };
 

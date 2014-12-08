@@ -9,7 +9,6 @@ using Utilities::Point;
 using Utilities::PathSegment;
 
 namespace Utilities {
-<<<<<<< HEAD
 
 class SegmentGroup {
 
@@ -20,15 +19,6 @@ class SegmentGroup {
 
         public:
 
-=======
-    class SegmentGroup {
-        private:
-            vector<PathSegment*> segments;
-
-            bool on_segment(Point p1, Point p2, Point p3);
-
-        public:
->>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
             SegmentGroup();
             ~SegmentGroup();
 
@@ -48,8 +38,4 @@ class SegmentGroup {
     };
 }
 
-<<<<<<< HEAD
 #endif //_PATH_SEGMENT_GROUP_BASE_H_
-=======
-#endif //_PATH_SEGMENT_GROUP_BASE_H_
->>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81

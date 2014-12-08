@@ -6,10 +6,7 @@
 /* Note: Edges are undirected */
 
 namespace Utilities {
-<<<<<<< HEAD
 
-=======
->>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81
     class Node;
 
     class Edge {
@@ -33,8 +30,4 @@ namespace Utilities {
     };
 }
 
-<<<<<<< HEAD
 #endif  //_EDGE_BASE_H_
-=======
-#endif  //_EDGE_BASE_H_
->>>>>>> 2c3d3687aac8e1c8c30b7d3a57d58e48fe1abb81

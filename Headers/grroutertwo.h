@@ -24,26 +24,28 @@ class GRRouterTwo: public GRBaseRouter {
 
 public:
 
-	GRRouterTwo( GRGrid *grid, vector<Utilities::GRNetList*> list );
+	GRRouterTwo( GRGrid *a, GRGrid *b, vector<Utilities::GRNetList*> list );
 
-	void initGrid() ;
+	void initGrid(GRGrid  * g) ;
 
-	void setInitNetPriorities(int targetNet);
+	void initNetPriorities(int targetNet);
 
 	void routeNets( int cycles, int targetNet ) ;
 
-	void routeGrid( bool even, int targetNet ) ;
+	void routeGrid(  GRGrid * a,  GRGrid * b, bool even, int targetNet ) ;
+	void routeCells( GRGrid * a, GRGrid * b, int x1, int y1, int targetNet ) ;
 
-	void routeCells( int x1, int y1, int targetNet ) ;
+	void setNetMaxPriorities( GRGrid * m, int targetNetID, int p  ) ;
+	void setNetPriorities( GRGrid * m, int pushNet ) ;
+	void initGridPriorities( GRGrid * m, int pushNet ) ;
 
-	vector<GRNode*> filterCells( int x, int y, int targetNet ) ;
+	int findGRPathsConn( GRGrid * m,  int cycle, int p  ) ;
+	int findGRPaths( GRGrid *m, int cycle, int net  ) ;
+	void retraceGRPath(GRGrid *m, GRNode * source, GRNode * sink ) ;
+	vector<GRNode*> filterCells( GRGrid *m, int x, int y, int targetNet ) ;
+	bool isNetCloseToNet( GRGrid *m, int targetNetID, int pushNet  ) ;
+	int getNetMaxPriorities( GRGrid *m, int targetNetID  ) ;
 
-	int getNetMaxPriorities( int targetNetID, int pushNet  ) ;
-
-	void setNetMaxPriorities( int targetNetID, int p  ) ;
-
-	void setConnNetPriorities( int pushNet ) ;
-	void initGridPriorities( int pushNet ) ;
 
 	virtual ~GRRouterTwo();
 

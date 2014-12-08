@@ -24,19 +24,17 @@ class GRRouterOne: public GRBaseRouter {
 
 public:
 
-	GRRouterOne( GRGrid *grid, vector<Utilities::GRNetList*> list );
+	GRRouterOne( GRGrid *a, GRGrid *b, vector<Utilities::GRNetList*> list );
 
 	virtual ~GRRouterOne();
 
-	void routeCells( int x1, int y1 );
+	void setNetPriorities(vector<Utilities::GRNetList*> nets);
 
-	void routeGrid( bool even );
+	void routeCells( GRGrid *a, GRGrid *b, int x1, int y1 );
 
-	void updateNets(vector<Utilities::GRNetList*> nets);
+	void routeGrid( GRGrid *a, GRGrid *b, bool even );
 
-	void routeNets( int cycles );
-
-	bool isLocalBottleNeck( int x, int y, int net );
+	void routeNets(  int cycles );
 
 
 };
