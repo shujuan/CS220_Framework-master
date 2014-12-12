@@ -1,10 +1,5 @@
 SRC=$(filter-out %main.cpp, src/*, Headers/* )
-
 OBJ=claim.o edge.o grid.o netlist.o node.o path.o pathsegment.o problem_object.o segmentgroup.o grnode.o grgrid.o grnetlist.o grbaserouter.o soukups_gr_one.o soukups_gr_two.o soukups_executor.o main.o json_name_value.o json_file.o json_value.o json_object.o json_parser.o json_parser_bison.o json_parser_lex.o 
-
-OBJ1=claim.o edge.o grid.o netlist.o node.o path.o pathsegment.o problem_object.o segmentgroup.o grnode.o grgrid.o grnetlist.o grbaserouter.o soukups_gr_one.o soukups_gr_two.o soukups_executor.o maingr2.o json_name_value.o json_file.o json_value.o json_object.o json_parser.o json_parser_bison.o json_parser_lex.o 
-
-OBJ2=claim.o edge.o grid.o netlist.o node.o path.o pathsegment.o problem_object.o segmentgroup.o grnode.o grgrid.o grnetlist.o grbaserouter.o soukups_gr_one.o soukups_gr_two.o soukups_executor.o maingr22.o json_name_value.o json_file.o json_value.o json_object.o json_parser.o json_parser_bison.o json_parser_lex.o 
 CC = g++
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
@@ -12,26 +7,14 @@ LFLAGS = -Wall $(DEBUG)
 
 vpath %.cc Source/
 
-gr1: $(OBJ) 
-	$(CC) $(LFLAGS) -o routergr1 $(OBJ)
-
-gr2: $(OBJ1) 
-	$(CC) $(LFLAGS) -o routergr2 $(OBJ1)
-
-gr22: $(OBJ2) 
-	$(CC) $(LFLAGS) -o routergr22 $(OBJ2)
+all: $(OBJ) 
+	$(CC) $(LFLAGS) -o router $(OBJ)
 
 claim.o : Headers/claim.h src/claim.cpp 
 	$(CC) $(CFLAGS)  src/claim.cpp
 
 main.o : main.cpp 
 	$(CC) $(CFLAGS)  main.cpp 
-
-maingr2.o : maingr2.cpp 
-	$(CC) $(CFLAGS)  maingr2.cpp 
-
-maingr22.o : maingr22.cpp 
-	$(CC) $(CFLAGS)  maingr22.cpp 
 
 edge.o : Headers/edge.h src/edge.cpp 
 	$(CC) $(CFLAGS)  src/edge.cpp

@@ -1,4 +1,3 @@
-
 #ifndef __JSON_PARSER_JSON_ARRAY_H_
 #define __JSON_PARSER_JSON_ARRAY_H_
 

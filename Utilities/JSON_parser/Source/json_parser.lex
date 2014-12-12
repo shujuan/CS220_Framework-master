@@ -5,7 +5,8 @@
  */
 
 %{
-#include "json_parser_bison.hh"
+// #include "json_parser_bison.hh"
+#include "json_parser_bison.h"
 #include <string.h>
 %}
 

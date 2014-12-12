@@ -65,7 +65,6 @@ public:
 	int  getPriority( ) ;
 
 	void displayNode();
-	void displayPriority();
 
 	bool getBoardCell();
 

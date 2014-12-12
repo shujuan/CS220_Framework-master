@@ -14,7 +14,8 @@
 #include "grid.h"
 #include "grnode.h"
 #include "path.h"
-#include "Routerdefinitions.h"
+
+#define UINT int 
 
 using std::list ;
 using Utilities::Grid;
@@ -36,8 +37,6 @@ public:
 
 	bool checkPointW6( UINT r, UINT c , int netID  )  ;
 
-	bool isLocalBottleNeck( UINT r, UINT c , int netID )  ;
-
 	list<GRNode*> findNeighborFree( UINT r, UINT c  )  ;
 
 	GRNode* findNeighborWithMark( UINT r, UINT c, int mark )  ;
@@ -47,14 +46,14 @@ public:
 	GRNode*         findGRNeighborWithMark( UINT r, UINT c, UINT netID, int mark )  ;
 
 	vector<GRNode*> retraceGRPath( GRNode * source, GRNode *target  )  ;
-	bool fastRetraceGRPath( GRNode * source, GRNode *target  )  ;
 
 	Path * createPath( vector<GRNode*> klist )  ;
+	void clearPaths();
+
 
 	void deleteLeeMarks() ;
 	void deleteBNetFlag() ;
 	void deleteLeeMarks( int netID ) ;
-
 
 	void displayNets();
 	void displayMarks();
@@ -62,8 +61,6 @@ public:
 	void pruneGrid();
 
 	void writeGridDiskNets( int filen ) ;
-
-	void writeGridDiskLee( int filen ) ;
 
 	void addNodeToNet( int x, int y, int netID );
 

@@ -8,8 +8,9 @@
 #ifndef GRNETLIST_H_
 #define GRNETLIST_H_
 
+#include "netlist.h"
+
 #include <string>
-#include "../Headers/netlist.h"
 
 using Utilities::Netlist;
 using Utilities::Point;
